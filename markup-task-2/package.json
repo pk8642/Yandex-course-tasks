@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "test": "npm run lint",
+    "lint": "stylelint tasks/*.html"
+  },
+  "dependencies": {
+    "@mapbox/stylelint-processor-arbitrary-tags": "0.2.0",
+    "stylelint": "9.6.0",
+    "stylelint-config-hrundel": "2.0.0"
+  }
+}

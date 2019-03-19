@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>CSS Селекторс 2000</title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="../global.css">
+    </head>
+    <body>
+        <h1 class="global-heading">&nbsp;</h1>
+        <p>Решите задачу, используя <code>border: 3px solid &lt;color&gt;</code></p>
+
+        <main class="global-results">
+            <style>
+                .global-scope :first-child
+                {
+                    border: 3px solid #ff6698;
+                }
+
+                .global-scope :last-child
+                {
+                    border: 3px solid #98ff66;
+                }
+
+                .global-scope :focus
+                {
+                    border: 3px solid #6698ff;
+                }
+            </style>
+
+            <section class="global-result">
+                <article class="global-scope">
+                    <input type="email" placeholder="email" value="invalid-email" required>
+                    <input type="email" placeholder="email" value="email@yandex.ru" required>
+                </article>
+            </section>
+
+            <section class="global-result">
+                <img class="global-goal">
+            </section>
+        </main>
+
+        <nav class="global-nav">
+            <a class="global-prev">Предыдущее</a>
+            <a class="global-next">Следующее</a>
+        </nav>
+
+        <script src="../global.js"></script>
+    </body>
+</html>

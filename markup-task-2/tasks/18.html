@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>CSS Селекторс 2000</title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="../global.css">
+    </head>
+    <body>
+        <h1 class="global-heading">&nbsp;</h1>
+        <p>Решите задачу, используя <code>opacity: &lt;value&gt;</code></p>
+
+        <main class="global-results">
+            <style>
+                div
+                {
+                    opacity: .5;
+                }
+
+                .global-scope:hover div:not(:hover)
+                {
+                    opacity: .25;
+                }
+                /* не знаю как сделать, чтобы именно при наведении на квадрат,
+                а не на область все остальные квадраты"тухли" */
+
+                .global-scope :hover
+                {
+                    opacity: 1;
+                }
+            </style>
+
+            <section class="global-result">
+                <article class="global-scope">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </article>
+            </section>
+
+            <section class="global-result">
+                <img class="global-goal">
+            </section>
+        </main>
+
+        <nav class="global-nav">
+            <a class="global-prev">Предыдущее</a>
+            <a class="global-next">Следующее</a>
+        </nav>
+
+        <script src="../global.js"></script>
+    </body>
+</html>

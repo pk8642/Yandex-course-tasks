@@ -1,0 +1,460 @@
+html,
+body
+{
+    background: #fff;
+    margin: 0;
+    height: 99%;
+}
+
+.shop-name
+{
+    background: #fff;
+    top: 0;
+    z-index: 500;
+    font-size: 32px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    position: fixed;
+    width: 100%;
+    height: 42px;
+    text-align: center;
+    border-bottom: 1px solid #808080;
+    font-weight: normal;
+    margin: 0 auto;
+}
+
+.shop-name::first-letter
+{
+    color: #f00;
+}
+
+.buttons
+{
+    position: relative;
+    bottom: -200px;
+    text-align: center;
+}
+
+.contacts
+{
+    z-index: 500;
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    position: relative;
+    height: 60px;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid #808080;
+}
+
+.contacts a
+{
+    color: #4c4cd8;
+}
+
+.contacts .contact
+{
+    float: left;
+    margin-left: 1%;
+}
+
+.contacts .organization
+{
+    float: right;
+    margin-right: 1%;
+    margin-top: 45px;
+}
+
+.contacts .organization-name::before
+{
+    content: '\00AB'; /*«*/
+}
+
+.contacts .organization-name::after
+{
+    content: '\00BB'; /*»*/
+}
+
+.contacts .mail::before
+{
+    content: '\2709';
+}
+
+.contacts .organization-name::after,
+.contacts .organization-name::before,
+.contacts .mail::before
+{
+    color: #000;
+}
+
+.contacts a
+{
+    text-decoration: none;
+}
+
+.carousel
+{
+    width: 100%;
+    min-height: 100%;
+    margin-bottom: -60px;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel::after
+{
+    content: '';
+    display: block;
+    height: 60px;
+}
+
+.cat-list
+{
+    width: 5000px;
+    height: 400px;
+    top: calc(50% - 200px);
+    position: absolute;
+    font-size: 0;
+    user-select: none;
+    transition: left .5s ease-out;
+    -o-transition: left .5s ease-out;
+    -ms-transition: left .5s ease-out;
+    -moz-transition: left .5s ease-out;
+    -webkit-transition: left .5s ease-out;
+}
+
+.cat
+{
+    position: relative;
+    display: inline-block;
+    width: 400px;
+    height: 80%;
+    margin: 0 50px;
+    transition: all .8s ease-in-out;
+    -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -ms-transition: all .8s ease-in-out;
+    -o-transition: all .8s ease-in-out;
+}
+
+.cat img
+{
+    position: absolute;
+    opacity: .7;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    object-fit: cover;
+    -o-object-fit: cover;
+    
+}
+
+.cat .image-name:hover
+{
+    box-shadow: 0 0 4px 3px #f00;
+    -webkit-box-shadow: 0 0 4px 3px #f00;
+}
+
+.image-name
+{
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    font-family: Comfortaa, cursive;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+
+.image-name a
+{
+    background-color: #000;
+    opacity: .7;
+    padding: 175px 35px 0;
+    font-size: 2.3rem;
+    position: absolute;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    transform: translate(0, 40px);
+    -webkit-transform: translate(0, 40px);
+    -moz-transform: translate(0, 40px);
+    -ms-transform: translate(0, 40px);
+    -o-transform: translate(0, 40px);
+}
+
+.button
+{
+    display: none;
+}
+
+.radio-buttons
+{
+    position: absolute;
+    user-select: none;
+    left: calc(50% - 100px);
+    top: calc(50% + 250px);
+    right: 0;
+}
+
+.circle,
+.circle a
+{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    background-color: #909296;
+    cursor: pointer;
+}
+
+.circle a
+{
+    display: none;
+}
+
+.first:checked ~ .radio-buttons .first-circle a,
+.second:checked ~ .radio-buttons .second-circle a,
+.third:checked ~ .radio-buttons .third-circle a,
+.fourth:checked ~ .radio-buttons .fourth-circle a,
+.fifth:checked ~ .radio-buttons .fifth-circle a,
+.sixth:checked ~ .radio-buttons .sixth-circle a,
+.seventh:checked ~ .radio-buttons .seventh-circle a,
+.eighth:checked ~ .radio-buttons .eighth-circle a,
+.ninth:checked ~ .radio-buttons .ninth-circle a,
+.tenth:checked ~ .radio-buttons .tenth-circle a
+{
+    background: #777;
+    border: 1px solid #000;
+}
+
+.first:checked ~ .cat-list
+{
+    left: calc(50% - 250px);
+}
+
+.second:checked ~ .cat-list
+{
+    left: calc(50% - 250px - 500px);
+}
+
+.third:checked ~ .cat-list
+{
+    left: calc(50% - 250px - 1000px);
+}
+
+.fourth:checked ~ .cat-list
+{
+    left: calc(50% - 250px - 1500px);
+}
+
+.fifth:checked ~ .cat-list
+{
+    left: calc(50% - 250px - 2000px);
+}
+
+.sixth:checked ~ .cat-list
+{
+    left: calc(50% - 250px - 2500px);
+}
+
+.seventh:checked ~ .cat-list
+{
+    left: calc(50% - 250px - 3000px);
+}
+
+.eighth:checked ~ .cat-list
+{
+    left: calc(50% - 250px  - 3500px);
+}
+
+.ninth:checked ~ .cat-list
+{
+    left: calc(50% - 250px  - 4000px);
+}
+
+.tenth:checked ~ .cat-list
+{
+    left: calc(50% - 250px  - 4500px);
+}
+
+.first:checked ~ .cat-list .first-cat,
+.second:checked ~ .cat-list .second-cat,
+.third:checked ~ .cat-list .third-cat,
+.fourth:checked ~ .cat-list .fourth-cat,
+.fifth:checked ~ .cat-list .fifth-cat,
+.sixth:checked ~ .cat-list .sixth-cat,
+.seventh:checked ~ .cat-list .seventh-cat,
+.eighth:checked ~ .cat-list .eighth-cat,
+.ninth:checked ~ .cat-list .ninth-cat,
+.tenth:checked ~ .cat-list .tenth-cat
+{
+    height: 100%;
+    margin-bottom: -50px;
+}
+
+.first:checked ~ .cat-list .first-cat img,
+.second:checked ~ .cat-list .second-cat img,
+.third:checked ~ .cat-list .third-cat img,
+.fourth:checked ~ .cat-list .fourth-cat img,
+.fifth:checked ~ .cat-list .fifth-cat img,
+.sixth:checked ~ .cat-list .sixth-cat img,
+.seventh:checked ~ .cat-list .seventh-cat img,
+.eighth:checked ~ .cat-list .eighth-cat img,
+.ninth:checked ~ .cat-list .ninth-cat img,
+.tenth:checked ~ .cat-list .tenth-cat img
+{
+    opacity: 1;
+}
+
+.first:checked ~ .cat-list .first-cat:hover .image-name,
+.second:checked ~ .cat-list .second-cat:hover .image-name,
+.third:checked ~ .cat-list .third-cat:hover .image-name,
+.fourth:checked ~ .cat-list .fourth-cat:hover .image-name,
+.fifth:checked ~ .cat-list .fifth-cat:hover .image-name,
+.sixth:checked ~ .cat-list .sixth-cat:hover .image-name,
+.seventh:checked ~ .cat-list .seventh-cat:hover .image-name,
+.eighth:checked ~ .cat-list .eighth-cat:hover .image-name,
+.ninth:checked ~ .cat-list .ninth-cat:hover .image-name,
+.tenth:checked ~ .cat-list .tenth-cat:hover .image-name
+{
+    display: block;
+}
+
+.cat-list .link-to-modal-view
+{
+    position: absolute;
+    z-index: 10;
+    top: -40px;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.first:checked ~ .radio-buttons .first-circle a,
+.second:checked ~ .radio-buttons .second-circle a,
+.third:checked ~ .radio-buttons .third-circle a,
+.fourth:checked ~ .radio-buttons .fourth-circle a,
+.fifth:checked ~ .radio-buttons .fifth-circle a,
+.sixth:checked ~ .radio-buttons .sixth-circle a,
+.seventh:checked ~ .radio-buttons .seventh-circle a,
+.eighth:checked ~ .radio-buttons .eighth-circle a,
+.ninth:checked ~ .radio-buttons .ninth-circle a,
+.tenth:checked ~ .radio-buttons .tenth-circle a,
+.first:checked ~ .cat-list .first-cat .link-to-modal-view,
+.second:checked ~ .cat-list .second-cat .link-to-modal-view,
+.third:checked ~ .cat-list .third-cat .link-to-modal-view,
+.fourth:checked ~ .cat-list .fourth-cat .link-to-modal-view,
+.fifth:checked ~ .cat-list .fifth-cat .link-to-modal-view,
+.sixth:checked ~ .cat-list .sixth-cat .link-to-modal-view,
+.seventh:checked ~ .cat-list .seventh-cat .link-to-modal-view,
+.eighth:checked ~ .cat-list .eighth-cat .link-to-modal-view,
+.ninth:checked ~ .cat-list .ninth-cat .link-to-modal-view,
+.tenth:checked ~ .cat-list .tenth-cat .link-to-modal-view
+{
+    display: inline-block;
+}
+
+.modal-view:target
+{
+    display: block;
+}
+
+.modal-view
+{
+    position: absolute;
+    min-height: 100%;
+    width: 100%;
+    z-index: 499;
+    color: #fff;
+    display: none;
+    background: rgba(0, 0, 0, .9);
+    bottom: -60px;
+}
+
+.modal-view .photo
+{
+    top: 50px;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    float: left;
+    opacity: 1;
+}
+
+.modal-view img
+{
+    position: relative;
+}
+
+.modal-view .vertical
+{
+    width: 50%;
+    top: 20px;
+    left: 40%;
+}
+
+.modal-view .horizontal
+{
+    width: 70%;
+    top: 50px;
+    left: 25%;
+}
+
+.modal-view .closer a
+{
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: #fff;
+    text-decoration: none;
+    z-index: 1;
+    transform: translate(400px, 100px);
+    -webkit-transform: translate(400px, 100px);
+    -moz-transform: translate(400px, 100px);
+    -ms-transform: translate(400px, 100px);
+    -o-transform: translate(400px, 100px);
+}
+
+.modal-view .info
+{
+    float: left;
+    position: relative;
+    font-size: 25px;
+    display: block;
+    width: 25%;
+    height: 100%;
+    text-align: justify;
+    top: 50px;
+    font-family: 'Caveat', cursive;
+}
+
+.modal-view .cat-name
+{
+    font-size: 1.5em;
+}
+
+.modal-view .cat-name:hover
+{
+    color: #0ff;
+}
+
+.modal-view .info p:not(.cat-name):hover
+{
+    background: #fff;
+    color: #000;
+}

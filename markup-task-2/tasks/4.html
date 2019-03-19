@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>CSS Селекторс 2000</title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="../global.css">
+    </head>
+    <body>
+        <h1 class="global-heading">&nbsp;</h1>
+        <p>Решите задачу, используя <code>border-top: 1px solid #000</code> и <code>background: &lt;color&gt;</code></p>
+
+        <main class="global-results">
+            <style>
+                article article:nth-of-type(2n + 1)
+                {
+                    background: #ff6;
+                }
+
+                article article:first-of-type ~ article
+                {
+                    border-top: 1px solid #000;
+                }
+            </style>
+
+            <section class="global-result">
+                <article class="global-scope">
+                    <h1>Заголовок</h1>
+                    <p style="display: none">
+                        Описание заголовка
+                    </p>
+                    <hr>
+                    <article>Первый</article>
+                    <article>Второй</article>
+                    <article>Третий</article>
+                    <article>Четвертый</article>
+                    <article>Пятый</article>
+                    <hr>
+                </article>
+            </section>
+
+            <section class="global-result">
+                <img class="global-goal">
+            </section>
+        </main>
+
+        <nav class="global-nav">
+            <a class="global-prev">Предыдущее</a>
+            <a class="global-next">Следующее</a>
+        </nav>
+
+        <script src="../global.js"></script>
+    </body>
+</html>

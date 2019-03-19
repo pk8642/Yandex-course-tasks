@@ -1,0 +1,7 @@
+{
+ "extends": "stylelint-config-hrundel",
+ "processors": ["@mapbox/stylelint-processor-arbitrary-tags"],
+ "rules": {
+   "selector-max-id": 1
+ }
+}

@@ -1,0 +1,273 @@
+@font-face
+{
+    font-family: HeadLines;
+    src: local('HeadLine')
+        , url(fonts/HeadLine.ttf) format('ttf') /* линтер только так принимал */
+        , url(fonts/HeadLine.eot) format('eot')
+        , url(fonts/HeadLine.woff) format('woff')
+        , url(fonts/HeadLine.woff2) format('woff2');
+}
+
+@font-face
+{
+    font-family: Quotes;
+    src: local('Quotes')
+        , url(fonts/Quotes.otf) format('otf')
+        , url(fonts/Quotes.eot) format('eot')
+        , url(fonts/Quotes.woff) format('woff')
+        , url(fonts/Quotes.woff2) format('woff2');
+}
+
+@font-face
+{
+    font-family: Names;
+    src: local('Names')
+        , url(fonts/Names.otf) format('otf')
+        , url(fonts/Names.eot) format('eot')
+        , url(fonts/Names.woff) format('woff')
+        , url(fonts/Names.woff2) format('woff2');
+}
+
+@font-face
+{
+    font-family: ForText;
+    src: local('Text')
+        , url(fonts/Text.ttf) format('ttf')
+        , url(fonts/Text.eot) format('eot')
+        , url(fonts/Text.woff) format('woff')
+        , url(fonts/Text.woff2) format('woff2');
+}
+
+@font-face
+{
+    font-family: FirstLetter;
+    src: local('FirstLetter')
+        , url(fonts/FirstLetter.otf) format('otf')
+        , url(fonts/FirstLetter.eot) format('eot')
+        , url(fonts/FirstLetter.woff) format('woff')
+        , url(fonts/FirstLetter.woff2) format('woff2');
+}
+
+main
+{
+    background: #d8d3af;
+}
+
+.first-part
+{
+    -webkit-columns: 1;
+    -moz-columns: 1;
+    columns: 1;
+    width: 39%;
+}
+
+.second-part
+{
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    columns: 2;
+    width: 60%;
+}
+
+.main-news
+{
+    -webkit-column-rule: 2px solid #fea;
+    -moz-column-rule: 2px solid #fea;
+    column-rule: 2px solid #fea;
+    width: 100%;
+}
+
+.first-part,
+.weather img,
+.weather,
+.second-part,
+.vertical
+{
+    display: inline-block;
+}
+
+.main-news
+{
+    width: 100%;
+    -webkit-columns: 4;
+    -moz-columns: 4;
+    columns: 4;
+}
+
+figure img
+{
+    width: 100%;
+    height: 100%;
+    -webkit-filter: grayscale(100);
+    filter: grayscale(100);
+}
+
+.aeroflot img
+{
+    width: 100%;
+}
+
+.aeroflot
+{
+    width: 85%;
+}
+
+@supports not (column-span: all)
+{
+    h5,
+    h2,
+    hr,
+    .aeroflot
+    {
+        position: relative;
+        left: 0;
+        top: 0;
+        right: 0;
+    }
+}
+
+div,
+p
+{
+    font-family: ForText, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+.weather
+{
+    font-size: 3.5em;
+    width: 90%;
+}
+
+h1,
+.weather
+{
+    margin: auto;
+}
+
+h2
+{
+    margin-top: 3%;
+}
+
+.text-center,
+hr
+{
+    text-align: center;
+    font-family: HeadLines, Helvetica, sans-serif;
+}
+
+hr
+{
+    margin-bottom: 5%;
+    border: 0;
+    height: 1px;
+    background: #808080;
+    width: 15%;
+}
+
+h3
+{
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+h5,
+h2,
+hr,
+.aeroflot
+{
+    -webkit-column-span: all;
+    -moz-column-span: all;
+    column-span: all;
+}
+
+h3,
+h5
+{
+    border: #000 1px solid;
+}
+
+h5,
+{
+    padding: 0 5%;
+}
+
+.vertical
+{
+    text-orientation: upright;
+    -webkit-writing-mode: vertical-lr;
+    -ms-writing-mode: tb-lr;
+    writing-mode: vertical-lr;
+    letter-spacing: -5px;
+}
+
+label
+{
+    -webkit-writing-mode: horizontal-tb;
+    -ms-writing-mode: lr-tb;
+    writing-mode: horizontal-tb;
+}
+
+span:not(.degrees)::before
+{
+    content: '\00AB';
+}
+
+span:not(.degrees)::after
+{
+    content: '\00BB';
+}
+
+span span::before
+{
+    content: '\201C';
+}
+
+span span::after
+{
+    content: '\201D';
+}
+
+.quote
+{
+    font-family: Quotes, Georgia, italic;
+}
+
+.name
+{
+    font-family: Names;
+}
+
+.latest-news p::first-letter,
+.main-information p:first-of-type::first-letter
+{
+    font-family: FirstLetter;
+    font-size: 3em;
+}
+
+.theme:checked ~ main
+{
+    background: #835454;
+    color: #eadcdc;
+}
+
+.font:checked ~ main figcaption,
+.font:checked ~ main .title,
+.font:checked ~ main p,
+.font:checked ~ main span:not(.quote),
+.font:checked ~ main div,
+.font:checked ~ main p::first-letter
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.font:checked ~ main .quote
+{
+    font-family: cursive;
+}
+
+.size:checked ~ main
+{
+    font-size: 1.3em;
+}

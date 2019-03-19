@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <title>CSS Селекторс 2000</title>
+        <meta charset="UTF-8">
+
+        <link rel="stylesheet" type="text/css" href="../global.css">
+    </head>
+    <body>
+        <h1 class="global-heading">&nbsp;</h1>
+        <p>Решите задачу, используя <code>color: &lt;color&gt;</code> и <code>opacity: &lt;value&gt;</code></p>
+
+        <main class="global-results">
+            <style>
+                .global-scope a[href]
+                {
+                    color: #6698ff;
+                }
+
+                .global-scope a[href]:hover,
+                .global-scope a[href]:hover:visited
+                {
+                    color: #ff6698;
+                    opacity: 1;
+                }
+
+                .global-scope a[href]:active,
+                .global-scope a[href]:active:visited
+                {
+                    color: #98ff66;
+                }
+
+                .global-scope a[href]:visited
+                {
+                    color: #ffb366;
+                }
+
+                .global-scope a:hover
+                {
+                    opacity: .5;
+                }
+
+                .global-scope a:active
+                {
+                    opacity: 1;
+                }
+            </style>
+
+            <section class="global-result">
+                <article class="global-scope">
+                    <a class="link" href="https://ya.ru">link</a>
+                    <a class="link">pseudolink</a>
+                </article>
+            </section>
+
+            <section class="global-result">
+                <img class="global-goal">
+            </section>
+        </main>
+
+        <nav class="global-nav">
+            <a class="global-prev">Предыдущее</a>
+            <a class="global-next">Следующее</a>
+        </nav>
+
+        <script src="../global.js"></script>
+    </body>
+</html>

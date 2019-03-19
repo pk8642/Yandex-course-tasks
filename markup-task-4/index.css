@@ -1,0 +1,166 @@
+body
+{
+    background: url(фон.png);
+}
+
+.cat-list
+{
+    text-align: center;
+    width: 100%;
+    min-width: 200px;
+}
+
+h1
+{
+    text-align: center;
+    font-family: Caveat, cursive;
+}
+
+.cat
+{
+    display: inline-table;
+    width: 200px;
+    text-align: justify;
+    margin: 0 10px 0 25px;
+    transition: all .8s ease-in-out;
+    -webkit-transition: all .8s ease-in-out;
+    -moz-transition: all .8s ease-in-out;
+    -ms-transition: all .8s ease-in-out;
+    -o-transition: all .8s ease-in-out;
+}
+
+.cat-photo
+{
+    text-align: center;
+    margin: 0 0 60px;
+    width: 300px;
+    height: 225px;
+    transition: .5s ease-in-out;
+    -webkit-transition: .5s ease-in-out;
+    -moz-transition: .5s ease-in-out;
+    -ms-transition: .5s ease-in-out;
+    -o-transition: .5s ease-in-out;
+}
+
+.cat-photo:hover
+{
+    box-shadow: 0 0 3px 2px #f00;
+    -webkit-box-shadow: 0 0 3px 2px #f00;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.cat-photo img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+}
+
+.name
+{
+    font-family: Comfortaa, cursive;
+    font-size: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+}
+
+.more-bio
+{
+    margin: 0;
+}
+
+a
+{
+    color: #000;
+    text-decoration: none;
+}
+
+.switcher,
+.switcher:checked ~ .cat-list .cat .status,
+.more-bio
+{
+    display: none;
+}
+
+.grid-list
+{
+    font-size: 1.5em;
+}
+
+.info
+{
+    margin-bottom: 20px;
+    border: 1px dashed #808080;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.switcher:checked ~ .cat-list .cat .more-bio,
+.switcher:checked ~ .grid-list
+{
+    display: inline-block;
+}
+
+.switcher:checked ~ .grid-list
+{
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+            
+}
+
+.switcher:checked ~ .cat-list
+{
+    width: 100%;
+}
+
+.switcher:checked ~ .cat-list .cat
+{
+    width: 20%;
+    padding: 10px;
+    margin: 10px 40% 20px;
+    box-shadow: 0 0 2px 1px #000;
+    -webkit-box-shadow: 0 0 2px 1px #000;
+}
+
+.switcher:checked ~ .cat-list .cat .info
+{
+    border: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.switcher:checked ~ .cat-list .cat .cat-photo
+{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    margin-bottom: 65px;
+}
+
+.switcher:checked ~ .cat-list .name
+{
+    white-space: normal;
+    overflow: visible;
+}
+
+.cat-list a:hover
+{
+    color: aqua;
+}
+
+.cat-list .cat:hover .info
+{
+    background: #fff;
+}
